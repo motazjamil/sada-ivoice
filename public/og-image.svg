@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F7F4EE" />
+      <stop offset="100%" stop-color="#EFEAE0" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+  <rect x="40" y="40" width="1120" height="550" rx="32" fill="#FFFDF9" stroke="#EAE3D9" stroke-width="2" />
+  
+  <!-- Brand pill -->
+  <rect x="90" y="90" width="130" height="52" rx="14" fill="#b7d9e7" />
+  <text x="155" y="126" font-family="Tajawal, sans-serif" font-size="28" font-weight="900" fill="#0F1E36" text-anchor="middle">صَدَى</text>
+  
+  <rect x="232" y="90" width="160" height="52" rx="14" fill="#F3EFE7" stroke="#E5DED2" stroke-width="1.5" />
+  <text x="312" y="124" font-family="Plus Jakarta Sans, sans-serif" font-size="20" font-weight="700" fill="#0F1E36" text-anchor="middle">iVoice Studio</text>
+
+  <!-- Title -->
+  <text x="90" y="220" font-family="Tajawal, sans-serif" font-size="48" font-weight="800" fill="#0F1E36">تحويل النصوص إلى أصوات بشرية طبيعية وواقعية</text>
+  <text x="90" y="275" font-family="Plus Jakarta Sans, sans-serif" font-size="34" font-weight="700" fill="#5C6B88">AI Text-to-Speech &amp; Neural Voice Studio</text>
+
+  <!-- Features -->
+  <rect x="90" y="340" width="220" height="90" rx="18" fill="#F7F4EE" stroke="#E5DED2" stroke-width="1.5" />
+  <text x="200" y="380" font-family="Plus Jakarta Sans, sans-serif" font-size="24" font-weight="800" fill="#0F1E36" text-anchor="middle">24 kHz</text>
+  <text x="200" y="408" font-family="Tajawal, sans-serif" font-size="16" font-weight="600" fill="#76859D" text-anchor="middle">Ultra-HD Audio</text>
+
+  <rect x="330" y="340" width="220" height="90" rx="18" fill="#F7F4EE" stroke="#E5DED2" stroke-width="1.5" />
+  <text x="440" y="380" font-family="Plus Jakarta Sans, sans-serif" font-size="24" font-weight="800" fill="#0F1E36" text-anchor="middle">6 Neural Voices</text>
+  <text x="440" y="408" font-family="Tajawal, sans-serif" font-size="16" font-weight="600" fill="#76859D" text-anchor="middle">نبرات متعددة</text>
+
+  <rect x="570" y="340" width="250" height="90" rx="18" fill="#F7F4EE" stroke="#E5DED2" stroke-width="1.5" />
+  <text x="695" y="380" font-family="Plus Jakarta Sans, sans-serif" font-size="24" font-weight="800" fill="#E25C47" text-anchor="middle">Multi-Speaker</text>
+  <text x="695" y="408" font-family="Tajawal, sans-serif" font-size="16" font-weight="600" fill="#76859D" text-anchor="middle">حوار صوتي ثنائي</text>
+
+  <!-- Developer Attribution & Copyright -->
+  <line x1="90" y1="480" x2="1110" y2="480" stroke="#EAE3D9" stroke-width="1.5" />
+  <text x="90" y="530" font-family="Tajawal, sans-serif" font-size="22" font-weight="700" fill="#0F1E36">جميع الحقوق لـ م. معتز جميل</text>
+  <text x="1110" y="530" font-family="Plus Jakarta Sans, sans-serif" font-size="20" font-weight="500" fill="#5C6B88" text-anchor="end">All Rights Reserved © Eng.Motaz Jamil</text>
+</svg>

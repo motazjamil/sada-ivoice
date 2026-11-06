@@ -1,0 +1,124 @@
+{
+  "$schema": "https://agentdiscovery.org/schemas/v1/ai-catalog.json",
+  "ardVersion": "1.0.0",
+  "name": "Sada iVoice AI Studio",
+  "description": "High-fidelity 24kHz neural text-to-speech, voice generation, and multi-speaker dialogue synthesis engine.",
+  "homepage": "https://sada-ivoice.ai.studio/",
+  "publisher": {
+    "name": "Eng.Motaz Jamil",
+    "url": "https://sada-ivoice.ai.studio/",
+    "email": "motazjm245@gmail.com"
+  },
+  "capabilities": [
+    "text-to-speech",
+    "voice-synthesis",
+    "dialogue-synthesis",
+    "audio-generation",
+    "arabic-tts",
+    "english-tts"
+  ],
+  "agentAccess": {
+    "protocols": ["http-rest"],
+    "baseUrl": "https://sada-ivoice.ai.studio",
+    "llmsTxt": "https://sada-ivoice.ai.studio/llms.txt"
+  },
+  "tools": [
+    {
+      "id": "synthesize_speech",
+      "name": "Synthesize Single Voice Speech",
+      "description": "Generates uncompressed 24kHz studio-quality WAV audio from a given text prompt using selected neural voice persona.",
+      "endpoint": "/api/synthesize",
+      "method": "POST",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "description": "The textual content or script to convert into spoken audio."
+          },
+          "voice": {
+            "type": "string",
+            "enum": ["Puck", "Charon", "Kore", "Fenrir", "Aoede", "Zephyr"],
+            "default": "Puck",
+            "description": "The acoustic voice persona for delivery."
+          },
+          "language": {
+            "type": "string",
+            "enum": ["ar", "en"],
+            "default": "ar",
+            "description": "Primary language of the content."
+          }
+        },
+        "required": ["text"]
+      },
+      "outputSchema": {
+        "contentType": "audio/wav",
+        "description": "Binary WAV audio stream at 24000 Hz, 16-bit mono PCM."
+      }
+    },
+    {
+      "id": "synthesize_dialogue",
+      "name": "Synthesize Multi-Speaker Dialogue",
+      "description": "Synthesizes conversational audio alternating between two distinct neural voices from a structured dialogue script.",
+      "endpoint": "/api/synthesize-dialogue",
+      "method": "POST",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "script": {
+            "type": "string",
+            "description": "Turn-by-turn dialogue text with speaker designations."
+          },
+          "speaker1Voice": {
+            "type": "string",
+            "enum": ["Puck", "Charon", "Kore", "Fenrir", "Aoede", "Zephyr"],
+            "default": "Puck"
+          },
+          "speaker2Voice": {
+            "type": "string",
+            "enum": ["Puck", "Charon", "Kore", "Fenrir", "Aoede", "Zephyr"],
+            "default": "Kore"
+          }
+        },
+        "required": ["script"]
+      },
+      "outputSchema": {
+        "contentType": "audio/wav",
+        "description": "Binary WAV audio stream containing the interleaved multi-speaker conversation."
+      }
+    },
+    {
+      "id": "generate_script",
+      "name": "Generate Voiceover Script",
+      "description": "Generates natural, well-formatted voiceover scripts tailored for single narrators or dual-speaker conversations.",
+      "endpoint": "/api/generate-script",
+      "method": "POST",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "topic": {
+            "type": "string",
+            "description": "The topic, scenario, or subject for the script."
+          },
+          "tone": {
+            "type": "string",
+            "enum": ["inspiring", "expert", "practical", "story"],
+            "default": "inspiring"
+          },
+          "isDialogue": {
+            "type": "boolean",
+            "default": false
+          }
+        },
+        "required": ["topic"]
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "title": { "type": "string" },
+          "script": { "type": "string" }
+        }
+      }
+    }
+  ]
+}

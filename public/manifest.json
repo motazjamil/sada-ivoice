@@ -1,0 +1,16 @@
+{
+  "name": "Sada iVoice | صَدَى",
+  "short_name": "Sada iVoice",
+  "description": "استوديو صَدَى الاحترافي لتحويل النصوص إلى صوت بالذكاء الاصطناعي بدقة 24kHz ونبرات متعددة",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F7F4EE",
+  "theme_color": "#F7F4EE",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

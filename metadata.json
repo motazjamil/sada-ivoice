@@ -1,0 +1,6 @@
+{
+  "name": "معتز ستوديو | Motaz TTS Studio",
+  "description": "استوديو احترافي متكامل لتحويل النص إلى صوت بالذكاء الاصطناعي بدقة 24kHz ونبرات متعددة عبر Gemini 3.1 Flash TTS",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

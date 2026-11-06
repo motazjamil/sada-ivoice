@@ -1,0 +1,68 @@
+# Sada iVoice AI Studio
+
+> High-fidelity 24kHz neural text-to-speech (TTS) and conversational voice synthesis engine engineered with Google Gemini Flash TTS technology. Developed by Eng.Motaz Jamil.
+
+Sada iVoice provides real-time, low-latency audio generation with expressive human emotional inflection and dynamic multi-speaker dialogue synthesis in Arabic and English.
+
+## Canonical URLs
+- Web Application: https://sada-ivoice.ai.studio/
+- XML Sitemap: https://sada-ivoice.ai.studio/sitemap.xml
+- Agent Discovery Catalog: https://sada-ivoice.ai.studio/ai-catalog.json
+- LLM Context: https://sada-ivoice.ai.studio/llms.txt
+
+## Key Capabilities
+- Single-speaker neural voice generation with 6 studio personas (Puck, Charon, Kore, Fenrir, Aoede, Zephyr).
+- Alternating two-speaker dialogue synthesis with turn-by-turn speaker tagging (e.g., "Speaker 1: ...", "Speaker 2: ...").
+- High-definition 24,000 Hz, 16-bit PCM uncompressed WAV audio output with RIFF headers.
+- Intelligent script prompts across four curated tones: Inspiring, Authoritative, Documentary, and Storytelling.
+- Client-side audio waveform visualization, looping, pitch/speed modulation, and one-click WAV download.
+
+## API Endpoints (Agent Accessible)
+
+### 1. Synthesize Single Voice
+- Endpoint: `POST /api/synthesize`
+- Content-Type: `application/json`
+- Parameters:
+  - `text` (string, required): Plain text or SSML-like script to convert to speech.
+  - `voice` (string, optional): Selected voice persona (Puck, Charon, Kore, Fenrir, Aoede, Zephyr). Default: Puck.
+  - `language` (string, optional): Target language code ("ar" or "en").
+- Response:
+  - Content-Type: `audio/wav`
+  - Body: 24kHz uncompressed WAV audio binary stream.
+
+### 2. Synthesize Multi-Speaker Dialogue
+- Endpoint: `POST /api/synthesize-dialogue`
+- Content-Type: `application/json`
+- Parameters:
+  - `script` (string, required): Interleaved dialogue formatted with speaker turns.
+  - `speaker1Voice` (string): Persona for speaker 1.
+  - `speaker2Voice` (string): Persona for speaker 2.
+- Response:
+  - Content-Type: `audio/wav`
+  - Body: Unified multi-speaker 24kHz WAV audio binary stream.
+
+### 3. Generate Creative Voiceover Script
+- Endpoint: `POST /api/generate-script`
+- Content-Type: `application/json`
+- Parameters:
+  - `topic` (string): Concept or outline.
+  - `tone` (string): inspiring | expert | practical | story.
+  - `isDialogue` (boolean): Whether to generate single or dual-speaker script.
+- Response:
+  - Content-Type: `application/json`
+  - Body: `{"title": string, "script": string}`
+
+### 4. Health & Status
+- Endpoint: `GET /api/health`
+- Response: `{"status": "ok", "timestamp": "ISO-8601"}`
+
+## Voice Personas & Acoustic Profiles
+- Puck: Deep, warm, resonant, authoritative storytelling.
+- Charon: Gravelly, cinematic, narrative depth.
+- Kore: Clear, bright, friendly, conversational.
+- Fenrir: Intense, dramatic, powerful, assertive.
+- Aoede: Melodic, expressive, soothing, informative.
+- Zephyr: Smooth, crisp, energetic, modern advertising tone.
+
+## License & Attribution
+- All Rights Reserved © Eng.Motaz Jamil (جميع الحقوق لـ م. معتز جميل).

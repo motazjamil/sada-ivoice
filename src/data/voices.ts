@@ -1,0 +1,58 @@
+import { VoiceOption } from "../types";
+
+export const AVAILABLE_VOICES: VoiceOption[] = [
+  {
+    id: "Kore",
+    name: "Kore",
+    labelAr: "كوري (Kore) - متزنة وواضحة",
+    labelEn: "Kore - Balanced & Warm",
+    gender: "female",
+    toneAr: "صوت نسائي دافئ ومتزن ومناسب للمحاضرات والإذاعة",
+    toneEn: "Warm, balanced, and articulate tone suitable for presentations and podcasts",
+  },
+  {
+    id: "Puck",
+    name: "Puck",
+    labelAr: "باك (Puck) - حماسي وديناميكي",
+    labelEn: "Puck - Energetic & Dynamic",
+    gender: "male",
+    toneAr: "صوت رجالي مفعم بالحيوية والطاقة والتحفيز",
+    toneEn: "Lively, energetic male voice with dynamic pace and engagement",
+  },
+  {
+    id: "Charon",
+    name: "Charon",
+    labelAr: "شارون (Charon) - عميق ورزين",
+    labelEn: "Charon - Deep & Authoritative",
+    gender: "male",
+    toneAr: "نبرة عميقة وجادة ورصينة تناسب الوثائقيات والخطابات الرسمية",
+    toneEn: "Deep, serious, and resonant tone ideal for documentaries and keynote addresses",
+  },
+  {
+    id: "Fenrir",
+    name: "Fenrir",
+    labelAr: "فينرير (Fenrir) - واثق وقوي",
+    labelEn: "Fenrir - Confident & Direct",
+    gender: "male",
+    toneAr: "صوت رجالي قوي وصريح ذو حضور قيادي",
+    toneEn: "Strong, confident male voice with executive clarity",
+  },
+  {
+    id: "Zephyr",
+    name: "Zephyr",
+    labelAr: "زفير (Zephyr) - هادئة وحكيمة",
+    labelEn: "Zephyr - Smooth & Thoughtful",
+    gender: "female",
+    toneAr: "صوت نسائي هادئ ورقيق مناسب للنصائح والتوجيه الهادئ",
+    toneEn: "Smooth, reflective, and soothing voice for thoughtful reflections",
+  },
+  {
+    id: "Aoede",
+    name: "Aoede",
+    labelAr: "أويدي (Aoede) - تعبيرية وحيوية",
+    labelEn: "Aoede - Expressive & Storyteller",
+    gender: "female",
+    toneAr: "نبرة تعبيرية غنية ملهمة ومناسبة لسرد القصص والروايات المشوقة",
+    toneEn: "Rich, expressive storytelling tone with captivating natural inflection",
+  },
+];

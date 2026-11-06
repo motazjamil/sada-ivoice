@@ -1,0 +1,10 @@
+# Robots.txt for Sada iVoice (صَدَى)
+# Website: https://sada-ivoice.ai.studio/
+# Developer: Eng.Motaz Jamil
+
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://sada-ivoice.ai.studio/sitemap.xml
